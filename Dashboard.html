@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+
+   .dashboard,
+.dashboard * {
+  box-sizing: border-box;
+}
+.dashboard {
+  background: #080411;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.gradient-blur {
+  background: rgba(96, 30, 249, 0.44);
+  border-radius: 592px;
+  opacity: 0.75;
+  width: 80.28%;
+  height: 37.5%;
+  position: absolute;
+  right: 9.86%;
+  left: 9.86%;
+  bottom: 92.09%;
+  top: -29.59%;
+  filter: blur(146.6px);
+}
+.heading-1-dashboard {
+  color: #f3f4f6;
+  text-align: left;
+  font-family: "Aeonik-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  position: absolute;
+  left: 63px;
+  top: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profile {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  height: 288px;
+  position: absolute;
+  right: 966px;
+  left: 63px;
+  top: 125px;
+}
+.container {
+  border-radius: 9999px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 32px;
+  overflow: hidden;
+}
+.profile-picture {
+  width: 100%;
+  flex: 1;
+  max-width: 128px;
+  position: relative;
+  overflow: hidden;
+}
+.whats-app-image-2024-10-27-at-11-24-32-e-365791-b-1 {
+  width: 324px;
+  height: 713px;
+  position: absolute;
+  left: -98px;
+  top: -63px;
+  object-fit: cover;
+  aspect-ratio: 324/713;
+}
+.heading-2-alexander-mitchell {
+  color: #f3f4f6;
+  text-align: left;
+  font-family: "Aeonik-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  position: absolute;
+  left: 88px;
+  top: 172px;
+  width: 235px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cyber-security-analyst {
+  color: #9ca3af;
+  text-align: left;
+  font-family: "Aeonik-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  position: absolute;
+  left: 123px;
+  top: 216px;
+  width: 165.45px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.audit {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  height: 212px;
+  position: absolute;
+  right: 966px;
+  left: 63px;
+  top: 457px;
+}
+.heading-3-total-audits {
+  color: #f3f4f6;
+  text-align: left;
+  font-family: "Aeonik-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 113.87px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.back {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  position: absolute;
+  right: 144px;
+  left: 32px;
+  bottom: 32px;
+  top: 84px;
+}
+._0 {
+  background: linear-gradient(
+    208.37deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(149, 115, 222, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-family: "Aeonik-Medium", sans-serif;
+  font-size: 28.0078125px;
+  line-height: 36px;
+  font-weight: 500;
+  position: absolute;
+  left: 21px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.completed {
+  color: #9ca3af;
+  text-align: left;
+  font-family: "Aeonik-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 68px;
+  top: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.history {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  height: 584px;
+  position: absolute;
+  right: 61px;
+  left: 526px;
+  top: 125px;
+}
+.heading-3-audit-history {
+  color: #f3f4f6;
+  text-align: left;
+  font-family: "Aeonik-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  position: absolute;
+  left: 32px;
+  top: 44px;
+  width: 125.7px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.button {
+  background: #6f41d2;
+  border-radius: 8px;
+  padding: 12px 24px 12px 26.61px;
+  display: flex;
+  flex-direction: row;
+  gap: 10.63px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 636px;
+  top: calc(50% - 260px);
+}
+.icon {
+  flex-shrink: 0;
+  width: 18.76px;
+  height: 28px;
+  position: relative;
+  overflow: visible;
+}
+.new-audit {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Aeonik-Regular", sans-serif;
+  font-size: 17.71875px;
+  line-height: 28px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading-3-no-audits-yet {
+  color: #9ca3af;
+  text-align: left;
+  font-family: "Aeonik-Medium", sans-serif;
+  font-size: 29px;
+  line-height: 28px;
+  font-weight: 500;
+  position: absolute;
+  left: 327px;
+  top: 84px;
+  width: 200px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.download-1 {
+  width: 422px;
+  height: 422px;
+  position: absolute;
+  left: 216px;
+  top: 110px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.frame-533 {
+  width: 73.34px;
+  height: 24px;
+  position: absolute;
+  left: 1306px;
+  top: 46px;
+}
+.vector {
+  width: 17.27%;
+  height: 55.57%;
+  position: absolute;
+  right: 82.73%;
+  left: 0%;
+  bottom: -33.35%;
+  top: 77.78%;
+  transform: translate(0px, -13.34px);
+  overflow: visible;
+}
+.logout {
+  color: #9ca3af;
+  text-align: center;
+  font-family: "Aeonik-Regular", sans-serif;
+  font-size: 15.625px;
+  line-height: 24px;
+  font-weight: 400;
+  position: absolute;
+  left: 24.34px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  width: 256px;
+  height: 21px;
+  position: absolute;
+  left: 565px;
+  top: calc(50% - -452px);
+}
+.terms-of-use {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 400;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 149px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.privacy-policy {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 400;
+  position: absolute;
+  left: 194px;
+  top: 3px;
+  width: 162px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._2025-all-right-reserved {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 400;
+  position: absolute;
+  left: 541px;
+  top: 990px;
+  width: 357px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screenshot-2025-03-18-220722-removebg-preview-1 {
+  width: 205px;
+  height: 57px;
+  position: absolute;
+  left: 63px;
+  top: 15px;
+  object-fit: cover;
+  aspect-ratio: 205/57;
+}
+
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="gradient-blur"></div>
+    <div class="heading-1-dashboard">Dashboard</div>
+    <div class="profile">
+      <div class="container">
+        <div
+          class="profile-picture"
+          style="
+            background: url(profile-picture0.png) center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          "
+        >
+          <img
+            class="whats-app-image-2024-10-27-at-11-24-32-e-365791-b-1"
+            src="asset/whats-app-image-2024-10-27-at-11-24-32-e-365791-b-10.png"
+          />
+        </div>
+      </div>
+      <div class="heading-2-alexander-mitchell">Laxmikant Dhawade</div>
+      <div class="cyber-security-analyst">Cyber Security Analyst</div>
+    </div>
+    <div class="audit">
+      <div class="heading-3-total-audits">Total Audits</div>
+      <div class="back">
+        <div class="_0">0</div>
+        <div class="completed">Completed</div>
+      </div>
+    </div>
+    <div class="history">
+      <div class="heading-3-audit-history">Audit History</div>
+      <div class="button">
+        <img class="icon" src="asset/icon0.svg" />
+        <div class="new-audit"> <a href="Audit.html" style="color: white;">New Audit</a></div>
+      </div>
+      <div class="heading-3-no-audits-yet">No Audits Yet</div>
+      <img class="download-1" src="asset/download-10.png" />
+    </div>
+    <div class="frame-533">
+      <img class="vector" src="asset/vector0.svg" />
+      <div class="logout">Logout</div>
+    </div>
+    <div class="link">
+      <div class="terms-of-use">Terms of Use</div>
+      <div class="privacy-policy">Privacy Policy</div>
+    </div>
+    <div class="_2025-all-right-reserved">© 2025 All right reserved.</div>
+    <img
+      class="screenshot-2025-03-18-220722-removebg-preview-1"
+      src="asset/screenshot-2025-03-18-220722-removebg-preview-10.png"
+    />
+  </div>
+  
+</body>
+</html>
